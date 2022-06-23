@@ -1,10 +1,13 @@
 <template>
   <div class="w-[420px] h-[108px] bg-white px-6 pb-2 pt-4 drop-shadow-md rounded-t-none rounded">
     <div class="flex justify-between">
-      <img src="@/assets/logo_nmw.svg" alt="" class="w-[61px] h-[33px]"/>
+      <div class="flex self-items-start">
+        <span class="text-md text-[#7a3beb]">OurClinic</span>
+        <img src="@/assets/logo_dummy.png" class="w-[20px] h-[20px] ml-1"/>
+      </div>
       <div class="flex flex-cols">
         <p class="mx-1 mt-1">Hi, </p>
-        <p class="mr-5 mt-1 text-[#EC8123]">Deva Andresa</p>
+        <p class="mr-5 mt-1 text-[#7a3beb]">Khoirul Anwar</p>
         <IconNotification alt="" class="w-[16px] h-[14px] mt-2"/>
       </div>
     </div>

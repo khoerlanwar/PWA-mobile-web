@@ -1,6 +1,6 @@
 # Web Mobile View
 ```
-Web Mobile view Project NMW Clinic. Upgrade User Interface Patient View
+Web Mobile View For User Patient Online Consultation
 ```
 
 ## Project setup

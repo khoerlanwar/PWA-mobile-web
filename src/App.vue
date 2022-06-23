@@ -28,15 +28,18 @@ export default {
   color: #6E6E72;
 }
 
-main {
+body {
   background-color: #EAEAE0;
+}
+
+main {
   width: 420px;
   /* min-height: 680px; */
+  background-color: #EAEAE0;
   height: 100%;
   margin: auto;
   margin-bottom: 74px;
   align-items: center;
   padding: 1.5rem;
 }
-
 </style>

@@ -3,15 +3,15 @@
     <!-- Member Card -->
     <icon-base icon-name="write"><icon-write /></icon-base>
     <div class="overflow-auto flex pb-4 flex-nowrap scrollbar-hide">
-      <div class="relative bg-[#FAAF40] w-[414px] h-[147px] rounded-md drop-shadow-xl">
+      <div class="relative bg-[#9d35f2] w-[414px] h-[147px] rounded-md drop-shadow-xl">
         <div class="flex bg-white w-full h-[137px] rounded-md drop-shadow-xl">
-          <img src="@/assets/dummy_users.png" alt="" class="rounded-full m-5 shadow-lg w-auto h-[98px]">
+          <img src="@/assets/users_dummy_male.png" alt="" class="rounded-full m-5 shadow-lg w-auto h-[98px]">
           <div class="self-center text-left w-full p-2 mr-2">
-            <p class="text-lg text-orange-400 font-bold">Deva Andresa</p>
-            <div class="text-sm">Petogogan</div>
-            <div class="text-tiny text-[#4CDB45] font-bold pb-3">MEMBER</div>
+            <p class="text-lg text-[#9d35f2] font-bold">Khoirul Anwar</p>
+            <div class="text-sm">Tangerang Selatan</div>
+            <div class="text-tiny text-[#6b42b3] font-bold pb-3">MEMBER</div>
             <div class="flex space-x-1">
-              <button class="border group bg-blue-500 w-[120px] h-[30px] px-3 ounded shadow-md hover:bg-white rounded">
+              <button class="border group bg-[#7a3beb] w-[120px] h-[30px] px-3 ounded shadow-md hover:bg-white rounded">
                 <router-link to="/point">
                   <div class="items-center flex">
                     <IconPoint class="w-[14px] h-[16px] mx-1 text-white group-hover:text-orange-400"/>
@@ -33,7 +33,7 @@
       <div v-for="items in SubMenu" :key="items.title">
         <router-link :to="items.direction">
         <div class="flex flex-col items-center">
-          <button class="rounded bg-orange-400 w-[55px] h-[55px]">
+          <button class="rounded bg-[#dfb8fc] w-[55px] h-[55px] shadow-md">
             <img :src="items.path" alt="" class="w-[45px] h-[45px] m-auto pt-2">
           </button>
           <span class="text-xs pt-2 items-center">{{items.title}}</span>
@@ -45,7 +45,7 @@
     <!-- Timeline Appointment -->
     <div class="flex justify-between mx-2 py-2">
       <span class="text-sm">Aktifitas terakhir</span>
-      <div class="text-sm text-[#0779FF]">See All</div>
+      <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
     <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
       <div class="flex flex-row space-x-1">
@@ -66,7 +66,7 @@
     <!-- Promo -->
     <div class="flex justify-between mx-2 py-1">
       <span class="text-sm">Promo</span>
-      <div class="text-sm text-[#0779FF]">See All</div>
+      <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
     <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
       <div class="flex flex-row space-x-1">
@@ -79,7 +79,7 @@
     <!-- Artikel -->
     <div class="flex justify-between mx-2 py-1">
       <span class="text-sm">Artikel</span>
-      <div class="text-sm text-[#0779FF]">See All</div>
+      <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
     <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
       <div class="flex flex-row space-x-1">
@@ -101,6 +101,7 @@ export default {
   }
 }
 </script>
+
 <script setup>
   const SubMenu = {
     'konsultasi' : {
@@ -133,27 +134,27 @@ export default {
   const Timeline = {
     0 : {
       id : 1,
-      doctorName : 'dr. Ni Komang Sri Padmiswari B',
-      doctorBranch : 'NMW Clinic Denpasar',
+      doctorName : 'dr. Clinic Surabaya',
+      doctorBranch : 'Clinic Cabang Surabaya',
       doctorDate : 'Tuesday, 09 June 2020',
       doctorTime : '13.40 - 13.50 WIB',
-      doctorProfile : require('@/assets/doctor_profile.png')
+      doctorProfile : require('@/assets/doctor_dummy_female.png')
     },
     1 : {
       id : 2,
-      doctorName : 'dr. Marchella',
-      doctorBranch : 'NMW Clinic Cinere',
+      doctorName : 'dr. Clinic Jakarta',
+      doctorBranch : 'Clinic Cabang Jakarta',
       doctorDate : 'Tuesday, 09 May 2020',
       doctorTime : '13.40 - 13.50 WIB',
-      doctorProfile : require('@/assets/doctor_profile.png')
+      doctorProfile : require('@/assets/doctor_dummy_male.png')
     },
     3 : {
       id : 2,
-      doctorName : 'dr. Natalia Mawardi',
-      doctorBranch : 'NMW Clinic Denpasar',
+      doctorName : 'dr. Clinic Bali',
+      doctorBranch : 'Clinic Cabang Bali',
       doctorDate : 'Tuesday, 09 March 2020',
       doctorTime : '13.40 - 13.50 WIB',
-      doctorProfile : require('@/assets/doctor_profile.png')
+      doctorProfile : require('@/assets/doctor_dummy_female.png')
     }
   }
 
@@ -161,32 +162,32 @@ export default {
     0 : {
       id : 1,
       title : 'Promo 1',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
     },
     1 : {
       id : 2,
       title : 'Promo 2',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
     },
     2 : {
       id : 3,
       title : 'Promo 3',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
     },
   }
 
   const Artikel = {
     0 : {
       title : 'Artikel 1',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
     },
     1 : {
       title : 'Artikel 2',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
     },
     2 : {
       title : 'Artikel 3',
-      path : require('@/assets/promo_dummy_2.svg')
+      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
     },
   }
 </script>
