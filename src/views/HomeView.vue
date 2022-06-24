@@ -1,43 +1,33 @@
 <template>
-  <main>
-    <!-- Member Card -->
-    <icon-base icon-name="write"><icon-write /></icon-base>
-    <div class="overflow-auto flex pb-4 flex-nowrap scrollbar-hide">
-      <div class="relative bg-[#9d35f2] w-[414px] h-[147px] rounded-md drop-shadow-xl">
-        <div class="flex bg-white w-full h-[137px] rounded-md drop-shadow-xl">
-          <img src="@/assets/users_dummy_male.png" alt="" class="rounded-full m-5 shadow-lg w-auto h-[98px]">
-          <div class="self-center text-left w-full p-2 mr-2">
-            <p class="text-lg text-[#9d35f2] font-bold">Khoirul Anwar</p>
-            <div class="text-sm">Tangerang Selatan</div>
-            <div class="text-tiny text-[#6b42b3] font-bold pb-3">MEMBER</div>
-            <div class="flex space-x-1">
-              <button class="border group bg-[#7a3beb] w-[120px] h-[30px] px-3 ounded shadow-md hover:bg-white rounded">
-                <router-link to="/point">
-                  <div class="items-center flex">
-                    <IconPoint class="w-[14px] h-[16px] mx-1 text-white group-hover:text-orange-400"/>
-                    <div class="text-white text-sm font-semibold mx-1 group-hover:text-orange-400">4,631 Poin</div>
-                  </div>
-                </router-link>
-              </button>
-              <div class="absolute bottom-4 right-5">
-                <img src="@/assets/dummy_barcode.svg" alt="" class="object-right-bottom"/>
-              </div>
-            </div>
+  <main class="h-screen w-screen max-w-[440px] overflow-auto">
+     <!-- Member Card -->
+    <div class="relative flex w-full bg-[#9d35f2] border drop-shadow-lg rounded-lg">
+      <div class="bg-white flex w-full rounded-md mb-4 drop-shadow-lg">
+      <div class="grid grid-cols-4 space-x-2 p-2 w-full">
+        <div class="m-auto">
+          <img src="@/assets/users_dummy_male.png" alt="" class="rounded-full shadow-lg"/>
+        </div>
+        <div class="text-left w-full col-span-2">
+          <div class="text-md text-[#9d35f2] font-semibold">Khoirul Anwar</div>
+          <div class="text-xs pt-1">Tangerang Selatan</div>
+          <div class="text-tiny text-[#6b42b3] font-semibold">MEMBER</div>
+          <div class="bg-white flex rounded shadow-md justify-center items-center bg-[#9d35f2] py-1 mt-2">
+            <IconPoint class="w-auto h-[12px] mx-1 text-white"/>
+            <div class="text-xs font-bold text-white">4,631 Poin</div>
           </div>
+        </div>
+        <div class="pl-3 flex flex-col justify-end">
+          <img src="@/assets/dummy_barcode.svg" alt="" class="w-[50px]"/>
         </div>
       </div>
     </div>
+    </div>
     <!-- End Member Card -->
     <!-- Sub Menu -->
-    <div class="flex justify-between space-x-1 py-2">
-      <div v-for="items in SubMenu" :key="items.title">
-        <router-link :to="items.direction">
-        <div class="flex flex-col items-center">
-          <button class="rounded bg-[#dfb8fc] w-[55px] h-[55px] shadow-md">
-            <img :src="items.path" alt="" class="w-[45px] h-[45px] m-auto pt-2">
-          </button>
-          <span class="text-xs pt-2 items-center">{{items.title}}</span>
-        </div>
+    <div class="relative flex justify-between my-3">
+      <div v-for="items in SubMenu" :key="items.title" class="bg-[#dfb8fc] rounded-md shadow-lg border border-[#9d35f2]">
+        <router-link :to="items.direction" class="m-auto">
+          <img :src="items.path" alt="" class="m-2 w-[32px]">
         </router-link>
       </div>
     </div>
@@ -47,17 +37,17 @@
       <span class="text-sm">Aktifitas terakhir</span>
       <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
-    <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
-      <div class="flex flex-row space-x-1">
-        <div v-for="items in Timeline" :key="items.id" class="border bg-white w-[345px] h-[90px] rounded shadow-md">
-          <div class="flex ">
-            <img :src="items.doctorProfile" alt="" class="rounded-full border-2 m-4 w-[60px]" />
-            <div class="self-center text-left">
-              <div class="text-tiny font-bold">{{items.doctorName}}</div>
-              <div class="text-xs">{{items.doctorBranch}}</div>
-              <div class="text-xs">{{items.doctorDate}}</div>
-              <div class="text-xs">{{items.doctorTime}}</div>
-            </div>
+    <div class="relative block m-auto w-full pb-4">
+      <div class="flex flex-row space-x-1 overflow-auto w-full scrollbar-hide flex flex-nowrap drop-shadow-md">
+        <div v-for="items in Timeline" :key="items" class="grid grid-cols-4 bg-white rounded-md min-w-[90%] border">
+          <div class="m-auto ml-4">
+            <img :src="items.doctorProfile" alt="" class="rounded-full border border-[#9d35f2] p-1" />
+          </div>
+          <div class="col-span-3 text-left py-2 ml-4">
+            <div class="text-tiny font-semibold">{{items.doctorName}}</div>
+            <div class="text-xs">{{items.doctorBranch}}</div>
+            <div class="text-xs">{{items.doctorDate}}</div>
+            <div class="text-xs">{{items.doctorTime}}</div>
           </div>
         </div>
       </div>
@@ -68,9 +58,9 @@
       <span class="text-sm">Promo</span>
       <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
-    <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
-      <div class="flex flex-row space-x-1">
-        <div v-for="items in Promo" :key="items.id" class="border bg-white w-[150px] h-[150px] rounded shadow-md">
+    <div class="relative block m-auto w-full pb-4">
+      <div class="flex flex-row space-x-1 overflow-auto w-full scrollbar-hide flex flex-nowrap drop-shadow-md">
+        <div v-for="items in Promo" :key="items" class="bg-white rounded-md min-w-[45%] border">
           <img :src="items.path" :alt="items.title" />
         </div>
       </div>
@@ -81,9 +71,9 @@
       <span class="text-sm">Artikel</span>
       <div class="text-sm text-[#0779FF]">Lihat Semua</div>
     </div>
-    <div class="relative block m-auto w-full pb-4 overflow-auto flex flex-nowrap scrollbar-hide">
-      <div class="flex flex-row space-x-1">
-        <div v-for="items in Artikel" :key="items.id" class="border bg-white w-[150px] h-[150px] rounded shadow-md">
+    <div class="relative block m-auto w-full pb-4">
+      <div class="flex flex-row space-x-1 overflow-auto w-full scrollbar-hide flex flex-nowrap drop-shadow-md">
+        <div v-for="items in Artikel" :key="items" class="bg-white rounded-md min-w-[45%] border">
           <img :src="items.path" :alt="items.title" />
         </div>
       </div>
@@ -162,32 +152,32 @@ export default {
     0 : {
       id : 1,
       title : 'Promo 1',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Promo+170x170'
     },
     1 : {
       id : 2,
       title : 'Promo 2',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Promo+170x170'
     },
     2 : {
       id : 3,
       title : 'Promo 3',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Promo+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Promo+170x170'
     },
   }
 
   const Artikel = {
     0 : {
       title : 'Artikel 1',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Artikel+170x170'
     },
     1 : {
       title : 'Artikel 2',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Artikel+170x170'
     },
     2 : {
       title : 'Artikel 3',
-      path : 'https://dummyimage.com/150x150/ffffff/000000.png&text=Artikel+150x150'
+      path : 'https://dummyimage.com/170x170/ffffff/000000.png&text=Artikel+170x170'
     },
   }
 </script>

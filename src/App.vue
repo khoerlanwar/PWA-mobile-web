@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="m-auto max-w-[420px]">
+  <div id="app">
     <HeaderTop />
     <router-view />
     <BottomNavigation />
@@ -28,17 +28,16 @@ export default {
   color: #6E6E72;
 }
 
-body {
+/* body {
   background-color: #EAEAE0;
-}
+} */
 
 main {
-  width: 420px;
+  width: 440px;
   /* min-height: 680px; */
   background-color: #EAEAE0;
   height: 100%;
   margin: auto;
-  margin-bottom: 74px;
   align-items: center;
   padding: 1.5rem;
 }

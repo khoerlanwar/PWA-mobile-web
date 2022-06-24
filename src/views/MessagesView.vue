@@ -1,8 +1,8 @@
 <template>
-  <main>
+  <main class="h-screen w-screen max-w-[440px] overflow-auto">
     <div class="mb-4">
       <button>
-        <div class="border bg-white w-[175px] h-[40px] p-1 flex rounded shadow-md">
+        <div class="border bg-white px-12 py-2 flex rounded shadow-md">
           <div class="text-sm font-bold m-auto">Help Tickets</div>
         </div>
       </button>
@@ -10,14 +10,14 @@
     <div class="flex justify-between mx-2 py-1">
       <span class="text-sm">Pesan Kamu</span>
     </div>
-    <div class="grid min-w-[420px]" style="margin: -1.5rem;">
+    <div class="grid max-w-[440px]" style="margin: -1.5rem;">
       <div class="bg-white grid grid-cols-6 p-2 shadow-md border">
         <div class="m-auto">
           <img src="@/assets/icon_costumer_care.svg" alt="" class="bg-[#7a3beb] w-[50px] h-[50px] rounded-full p-2 m-auto" />
         </div>
         <div class="col-span-4 pl-2 col-span-1/2 text-left">
           <p class="text-sm font-semibold">Customer Care</p>
-          <p class="pt-1 text-sm">Hi Khoirul, Terimakasih telah menghubungi Customer Service, kami...</p>
+          <p class="pt-1 text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget...</p>
         </div>
         <div class="text-right grid justify-items-center">
           <p class="text-xs">31/5/2022</p>
@@ -30,7 +30,7 @@
         </div>
         <div class="col-span-4 pl-2 col-span-1/2 text-left">
           <p class="text-sm font-semibold">Clinic Utama</p>
-          <p class="pt-1 text-sm">Hi Deva, Terimakasih telah menghubungi Customer Service NMW, kami...</p>
+          <p class="pt-1 text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget...</p>
         </div>
         <div class="text-right grid justify-items-center">
           <p class="text-xs">21/3/2022</p>
@@ -42,7 +42,7 @@
         </div>
         <div class="col-span-4 pl-2 col-span-1/2 text-left">
           <p class="text-sm font-semibold">Clinic Cabang Jakarta</p>
-          <p class="pt-1 text-sm">Sesi konsul kamu telah selesai, silahkan tebus resep kamu disini...</p>
+          <p class="pt-1 text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget...</p>
         </div>
         <div class="text-right grid justify-items-center">
           <p class="text-xs">21/3/2022</p>
@@ -54,7 +54,7 @@
         </div>
         <div class="col-span-4 pl-2 col-span-1/2 text-left">
           <p class="text-sm font-semibold">Clinic Cabang Bali</p>
-          <p class="pt-1 text-sm">Kamu melewatkan sesi konsultasi, kamu bisa melakukan reservasi kembali</p>
+          <p class="pt-1 text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget...</p>
         </div>
         <div class="text-right grid justify-items-center">
           <p class="text-xs">21/3/2022</p>

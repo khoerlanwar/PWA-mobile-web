@@ -1,9 +1,9 @@
 <template>
-  <div class="w-[420px] h-[108px] bg-white px-6 pb-2 pt-4 drop-shadow-md rounded-t-none rounded">
+  <div class="w-screen max-w-[440px] h-[108px] bg-white px-6 pb-2 pt-4 drop-shadow-md rounded-t-none rounded m-auto">
     <div class="flex justify-between">
       <div class="flex self-items-start">
         <span class="text-md text-[#7a3beb]">OurClinic</span>
-        <img src="@/assets/logo_dummy.png" class="w-[20px] h-[20px] ml-1"/>
+        <img src="@/assets/logo_dummy.png" class="w-[20px] h-[20px]"/>
       </div>
       <div class="flex flex-cols">
         <p class="mx-1 mt-1">Hi, </p>
